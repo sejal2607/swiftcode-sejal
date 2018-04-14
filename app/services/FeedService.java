@@ -22,12 +22,13 @@ public class FeedService {
                     .get();
             Document feedResponse = responsePromise.thenApply(WSResponse::asXml).toCompletableFuture().get();
             Node item = feedResponse.getFirstChild().getFirstChild().getChildNodes().item(10);
-            feedResponseObject.title=item.getChildNodes().item(0).getFirstChild().getNodeValue();
-            feedResponseObject.pubDate=item.getChildNodes().item(3).getFirstChild().getNodeValue();
-            feedResponseObject.Description=item.getChildNodes().item(4).getFirstChild().getNodeValue();
-         }
-         catch (Exception e) {
+            feedResponseObject.title = item.getChildNodes().item(0).getFirstChild().getNodeValue();
+            feedResponseObject.pubDate = item.getChildNodes().item(3).getFirstChild().getNodeValue();
+            feedResponseObject.Description = item.getChildNodes().item(4).getFirstChild().getNodeValue();
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        return feedResponseObject;
     }
+
 }
