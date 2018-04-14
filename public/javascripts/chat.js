@@ -1,9 +1,23 @@
 var app = angular.module('chatApp', ['ngMaterial']);
 app.controller('chatController', function ($scope) {
-    $scope.array = [
+    $scope.messages = [
         {
-            'text': 'Sejal',
-            'flag': true
-    }];
+            'sender': 'USER',
+            'text': 'Hello'
+
+    },
+        {
+            'sender': 'BOT',
+            'text': 'hii what i can do for u??'
+    },
+        {
+            'sender': 'USER',
+            'text': 'help me in solving problem!!'
+   },
+        {
+            'sender': 'BOT',
+            'text': 'what u want me to help in'
+}
+    ];
 
 });
