@@ -1,1 +1,26 @@
+html,
+body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hiden;
+}
 
+#message-pane {
+    background-color: #27B59F;
+    margin: 15px;
+}
+
+#form-card {
+    margin: 15px;
+    background-color: #27B59F;
+}
+
+#label1 {
+    font-style: italic;
+    text-decoration: inherit;
+}
+
+#material-icons {
+    font-size: 80px !important;
+}
