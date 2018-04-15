@@ -22,4 +22,8 @@ public class HomeController extends Controller {
         return ok(chat.render());
     }
 
+    public LegacyWebSocket<String> chatSocket() {
+        //I didnt get this
+        return WebSocket.withActor(MessageActor::props);
+    }
 }

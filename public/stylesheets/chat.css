@@ -7,13 +7,16 @@ body {
 }
 
 #message-pane {
-    background-color: #27B59F;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH3ANXIWePvyTLPKHl-TovIUCFm9jkxanjZPNl5eXEAhr9riZiAA");
+
+    background-size: cover;
     margin: 15px;
 }
 
 #form-card {
     margin: 15px;
     background-color: #27B59F;
+    background-position: center;
 }
 
 #label1 {
