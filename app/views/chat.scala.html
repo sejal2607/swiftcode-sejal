@@ -1,40 +1,34 @@
 <!DOCTYPE HTML>
 <html>
+<link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmf-uy2ZMXL13CvNWG9wdT1DTBTh8PlRkF3TFGTQtaHCSMnPlt">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/chat.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+    body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxqxAkwTbY2dPjnECO0HoaPae697sNW5KEwf5WwQemVLrODKjR");
+        background-size: cover;
+    }
+    </style>
 </head>
 
 <body ng-app="chatApp" ng-controller="chatController" layout="row" layout-align="center stretch">
     <md-card layout="column" flex="none" style="width: 800px">
         <md-content id="message-pane" layout="column" flex="90">
             <div ng-repeat="msg in messages" layout='column' layout-align="{{msg.sender=='BOT'?'start start':'start end'}}">
-                <md-card class="message-card" ng-style="msg.sender=='BOT'? {'background-color': '#FFB748' }: {'background-color': '#81C784'}">
-                    <span>{{msg.text}}</span>
+                <md-card class="message-card" ng-style="msg.sender=='BOT'? {'background-color': '#03234A','color':'#EDF2F8'}: {'background-color': '#FFB748','color':'#B52747'}">
+                    <span> {{msg.text}}</span>
                 </md-card>
             </div>
         </md-content>
         <md-card id="form-card" layout="row" flex="10">
             <form layout="row" flex="90">
                 <md-input-container layout="row" flex="90" id="label1">
-                    <label id="label1" flex="10">Message</label>
-                    <input ng-model="userMessage" flex="90">
-                </md-input-container>
+                    <label id="label1" flex="10"> Message</label>
+                    <input ng-model="userMessage" flex="90"> </md-input-container>
             </form>
             <md-button flex class="md-fab md-accent" layout="row" layout-align="center center">
-                <i class="material-icons">gavel</i>
-            </md-button>
-        </md-card>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-        <script src="/assets/javascripts/chat.js"></script>
-</body>
-
-</html>
+                <i class="material-icons"> gavel</i > </md-button > </md-card > <script src="https://code.jquery.com/jquery-3.2.1.min.js" > </script > <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" > </script > <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js" > </script > <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js" > </script > <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js" > </script > <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js" > </script > <script src="/assets/javascripts/chat.js" > </script > </body > </html >
