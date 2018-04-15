@@ -18,13 +18,14 @@ public class NewsAgentService {
      try
      {
 
-         WSRequest queryRequest=WS.url("https://api.api.ai/api/query");
+         WSRequest queryRequest=WS.url("https://api.dialogflow.com/v1/query");
          CompletionStage<WSResponse> responsePromise = queryRequest
                  .setQueryParameter("v","20150910")
                  .setQueryParameter("query",query)
                  .setQueryParameter("lang","en")
                  .setQueryParameter("timezone","2018-13-04T16:29:23+0530")
-                 .setHeader("Authorization","Bearer 054a388ef08e46c3beb61cd9a12dd13f")
+                 .setQueryParameter("sessionId",sessionId.toString())
+                 .setHeader("Authorization","Bearer 946df4ead6524dbcaeb5c6c2409462b6")
                  .get();
          JsonNode response = responsePromise.thenApply(WSResponse::asJson).toCompletableFuture().get();
          newsAgentResponse.query = response.get("result").get("parameters").get("keyword").asText().isEmpty() ?
